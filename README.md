@@ -19,26 +19,28 @@ The dataset contains Amazon product data, including various metadata and user re
 - `helpful_yes`: Number of times the review was found helpful
 - `total_vote`: Total number of votes for the review
 
-## Task 1: Calculate Weighted Average Rating
+## Tasks
+
+### Calculate Weighted Average Rating
 
 - Read the Dataset and Calculate the Initial Average Rating
 - Weighted averages are computed for four different time periods.
 - The results are compared to the initial average product rating.
 
-## Task 2: Determine the Top 20 Reviews for Display
+### Determine the Top 20 Reviews for Display
 - The `helpful_no` variable, representing the number of unhelpful votes, is generated.
 - Three sorting scores are calculated for each review:
   1. `score_pos_neg_diff`: The difference between the number of helpful and unhelpful votes.
   2. `score_average_rating`: The ratio of helpful votes to the total votes.
   3. `wilson_lower_bound`: The lower bound of the Wilson Score Confidence Interval.
 
-### Wilson Lower Bound (WLB):
+#### Wilson Lower Bound (WLB):
 - Wilson Lower Bound is particularly useful for making more reliable evaluations, especially for reviews with a low number of votes.
 - WLB does not rely on categorizing reviews as "positive" or "negative" and, therefore, does not require specific assumptions about the voting system.
 - It is used to balance out uncertain or low-vote reviews and provides a more general evaluation.
 - WLB calculates a product's ranking by taking into account the "quality" of a review.
 
-### Score Average Rating:
+#### Score Average Rating:
 - Score Average Rating represents a simple average rating approach.
 - This method is based directly on review ratings and treats positive and negative votes equally.
 - Score Average Rating assumes an equal weight for each review and places more emphasis on high-rated reviews.
