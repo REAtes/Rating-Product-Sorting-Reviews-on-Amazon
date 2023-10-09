@@ -23,13 +23,13 @@ The dataset contains Amazon product data, including various metadata and user re
 
 ### Calculate Weighted Average Rating
 
-- Read the Dataset and Calculate the Initial Average Rating
-- Weighted averages are computed for four different time periods.
-- The results are compared to the initial average product rating.
+1. Read the Dataset and Calculate the Initial Average Rating
+2. Weighted averages are computed for four different time periods.
+3. The results are compared to the initial average product rating.
 
 ### Determine the Top 20 Reviews for Display
-- The `helpful_no` variable, representing the number of unhelpful votes, is generated.
-- Three sorting scores are calculated for each review:
+1. The `helpful_no` variable, representing the number of unhelpful votes, is generated.
+2. Three sorting scores are calculated for each review:
   1. `score_pos_neg_diff`: The difference between the number of helpful and unhelpful votes.
   2. `score_average_rating`: The ratio of helpful votes to the total votes.
   3. `wilson_lower_bound`: The lower bound of the Wilson Score Confidence Interval.
